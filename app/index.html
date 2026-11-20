@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Ledger — GTA VI PS5 trophy guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand">
+      <p class="eyebrow">Leonida field guide</p>
+      <h1>Leonida Trophy Ledger</h1>
+      <p class="subtitle" id="subtitle">GTA VI · PS5 · trophies</p>
+    </div>
+
+    <div class="scoreboard" aria-live="polite">
+      <div class="stat stat-earned">
+        <span class="stat-value" id="earned-count">0 / 0</span>
+        <span class="stat-label">earned</span>
+      </div>
+      <div class="stat stat-split">
+        <span class="grade-split" id="grade-split">P 0/0 · G 0/0 · S 0/0 · B 0/0</span>
+        <span class="stat-label">grade split</span>
+      </div>
+      <div class="stat stat-points">
+        <span class="stat-value stat-value-small" id="psn-points">0 / 0</span>
+        <span class="stat-label">PSN points</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <label class="spoiler-toggle">
+        <input type="checkbox" id="spoiler-toggle" checked>
+        <span>Spoiler shield</span>
+      </label>
+      <div class="action-buttons">
+        <button type="button" class="btn" id="export-btn">Export</button>
+        <label class="btn file-btn">Import
+          <input type="file" id="import-input" accept="application/json,.json">
+        </label>
+      </div>
+      <p class="saved-note">Saved in this browser</p>
+    </div>
+
+    <progress class="header-progress" id="progress-bar" max="1" value="0" aria-label="Trophies earned"></progress>
+  </header>
+
+  <div class="audit" id="audit-strip" aria-label="Guide audit">
+    <span class="audit-label">AUDIT</span>
+    <span id="audit-content">Loading data…</span>
+  </div>
+
+  <nav class="tabs" role="tablist" aria-label="Guide views">
+    <button type="button" class="tab is-active" role="tab" aria-selected="true" data-view="tracker">Tracker</button>
+    <button type="button" class="tab" role="tab" aria-selected="false" data-view="roadmap">Roadmap</button>
+    <button type="button" class="tab" role="tab" aria-selected="false" data-view="missables">Missables</button>
+    <button type="button" class="tab" role="tab" aria-selected="false" data-view="sources">Sources</button>
+  </nav>
+
+  <p class="load-error" id="load-error" role="alert" hidden></p>
+
+  <main class="main-area">
+    <section class="view view-tracker" id="view-tracker" role="tabpanel" aria-label="Trophy tracker">
+      <div class="chip-row" id="filter-chips"></div>
+      <div class="tracker-grid">
+        <section class="panel checklist-panel" aria-label="Trophy checklist">
+          <div class="panel-head">
+            <span class="shown-count" id="shown-count">0 SHOWN</span>
+            <label class="sort-label">Sort
+              <select id="sort-select">
+                <option value="roadmap">Roadmap order</option>
+                <option value="name">Name</option>
+                <option value="grade">Grade</option>
+              </select>
+            </label>
+          </div>
+          <div class="checklist" id="checklist"></div>
+        </section>
+
+        <section class="panel detail-panel" id="detail-pane" aria-label="Selected trophy"></section>
+
+        <aside class="rail" aria-label="Guide rail">
+          <section class="panel rail-panel" id="next-up-panel"></section>
+          <section class="panel rail-panel" id="detail-sources-panel"></section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="view view-roadmap" id="view-roadmap" role="tabpanel" aria-label="Roadmap" hidden>
+      <div class="wide-panel" id="roadmap-body"></div>
+    </section>
+
+    <section class="view view-missables" id="view-missables" role="tabpanel" aria-label="Missables" hidden>
+      <div class="wide-panel" id="missables-body"></div>
+    </section>
+
+    <section class="view view-sources" id="view-sources" role="tabpanel" aria-label="Sources" hidden>
+      <div class="wide-panel" id="sources-body"></div>
+    </section>
+  </main>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
