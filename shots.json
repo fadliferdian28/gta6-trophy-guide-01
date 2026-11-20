@@ -1,0 +1,38 @@
+[
+  {
+    "file": "1-cover.jpg",
+    "path": "/",
+    "note": "Tracker, Positive Mental Attitude open, 10 earned",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "2-roadmap.jpg",
+    "path": "/",
+    "tab": "Roadmap",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "3-missables.jpg",
+    "path": "/",
+    "tab": "Missables",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  {
+    "file": "4-sources.jpg",
+    "path": "/",
+    "tab": "Sources",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  }
+]
